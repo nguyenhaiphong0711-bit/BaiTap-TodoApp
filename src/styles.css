@@ -1,0 +1,182 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+
+.todo {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+
+.todo h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 24px;
+}
+
+
+.inner-create {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.inner-create input {
+  flex: 1;
+  padding: 14px 12px;
+  border: 1px solid #bdbdbd;
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+.inner-create input:focus {
+  border-color: #2f80ed;
+}
+
+.inner-create button {
+  background-color: #2f80ed;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.inner-create button:hover {
+  background-color: #1a62c6;
+}
+
+
+.inner-filter {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #bdbdbd;
+  margin-bottom: 18px;
+}
+
+.inner-filter button {
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+
+.inner-filter button.active::after {
+  content: "";
+
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background-color: #2f80ed;
+  border-radius: 4px 4px 0 0;
+}
+
+
+.inner-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.inner-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.inner-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.inner-left input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  accent-color: #2f80ed;
+  cursor: pointer;
+}
+
+
+.inner-left span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333333;
+  user-select: none;
+}
+
+
+.inner-left span.completed {
+  text-decoration: line-through;
+  color: #333333;
+}
+
+
+.btn-delete-icon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #eb5757;
+}
+
+.btn-delete-icon:hover {
+  color: #d33f3f;
+}
+
+
+.inner-footer-completed {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+
+.btn-delete-all {
+  background-color: #eb5757;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 26px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-delete-all:hover {
+  background-color: #d33f3f;
+}
